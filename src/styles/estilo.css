@@ -60,15 +60,14 @@ header span{
     font-size: 30px;
 }
 
-.contenedor{
-    max-width: 1200px;
-    padding: 10px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    /* oculto lo que queda fuera del .contenedor */
-    contain: paint;
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
+
 /* SECCION CONTENEDOR DE ITEMS */
 .contenedor .producto{
     color: #f3f3f3;

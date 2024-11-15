@@ -28,6 +28,13 @@ header span{
     border-style:dashed;
     padding: 10px;
 }
+.navegacion .btn.btn-link{
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.navegacion .btn.btn-link:hover{
+    text-decoration: underline;
+}
 .logout{
     padding: 5px;
     border: none;
@@ -147,7 +154,7 @@ header span{
     border-radius: 10px;
 }
 /* seccion carrito */
-.carrito{
+.carrito {
     background-color: #f3f3f3;
     border: 5px solid #666;
     width: 35%;
@@ -162,6 +169,12 @@ header span{
     margin-right: -100%;
     opacity: 0;
 }
+
+.carrito.visible {
+    margin-right: 0;
+    opacity: 1;
+}
+
 .carrito .header-carrito{
     background-color: #000;
     color: #fff;

@@ -1,5 +1,5 @@
 
-
+import React from "react";
 const Carusel = () => {
     return(
         <div id="productCarousel" className="carousel slide" data-bs-ride="carousel">

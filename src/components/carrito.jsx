@@ -11,7 +11,7 @@ const Carrito = ({ carritoItems, setCarritoItems }) => {
       total += precio * item.cantidad;
     });
     total = Math.round(total * 100) / 100;
-    document.querySelector('.carrito-precio-total').innerText = '$' + total.toLocaleString("es") + ",00";
+    document.querySelector('.carrito-precio-total').innerText = '$' + total.toLocaleString("es");
   }, [carritoItems]);
 
   useEffect(() => {
@@ -74,7 +74,8 @@ const Carrito = ({ carritoItems, setCarritoItems }) => {
                 <input type="text" value={item.cantidad} className="carrito-item-cantidad" disabled />
                 <i className="fa-solid fa-plus sumar-cantidad" onClick={() => sumarCantidad(index)}></i>
               </div>
-              <span className="carrito-item-precio">{item.precio}</span>
+              <span className="carrito-item-precio">{
+              `$${(parseFloat(item.precio.replace('$', '').replace('.', '').replace('.', '')) * item.cantidad).toLocaleString('es')}`}</span>
             </div>
             <button className="btn-eliminar" onClick={() => eliminarItemCarrito(index)}>
               <i className="fa-solid fa-trash"></i>

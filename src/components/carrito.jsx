@@ -1,7 +1,6 @@
 import React,{ useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Swal from 'sweetalert2';
-import Swal from 
 
 const Carrito = ({ carritoItems, setCarritoItems }) => {
 

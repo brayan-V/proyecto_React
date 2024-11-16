@@ -4,7 +4,7 @@
     padding:0;
     font-family: 'Open Sans';
 }
-header,body,footer{
+header,body{
     background-image: url('img/ilustracion-detallada-sala-juegos_23-2148923561.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,6 +22,14 @@ header h1{
 header span{
     font-family: "Honk", system-ui;
     font-size: 35px;
+}
+
+footer ul li{
+    padding: 20px;
+
+}
+footer ul a{
+text-decoration: none;
 }
 .navegacion{
     background-color: rgb(64, 16, 109, 0.8);
@@ -68,11 +76,12 @@ header span{
 }
 
 .contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; 
+    transition: padding-right 0.3s ease;
 }
 
 /* SECCION CONTENEDOR DE ITEMS */
@@ -162,8 +171,9 @@ header span{
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: auto;
-    position: sticky !important;
+    position: fixed !important;
     top: 0;
+    right: 0;
     transition: .3s;
     /* Estilos para ocultar */
     margin-right: -100%;
@@ -278,6 +288,7 @@ header span{
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
+
 
 
 

@@ -51,11 +51,7 @@ const Carrito = ({ carritoItems, setCarritoItems }) => {
   };
 
   const ocultarCarrito = () => {
-    if (carritoItems.length === 0) {
-      document.querySelector('.carrito').style.marginRight = '-100%';
-      document.querySelector('.carrito').style.opacity = '0';
-      document.querySelector('.contenedor-items').style.width = '100%';
-    }
+    document.querySelector('.carrito').classList.remove('visible');
   };
 
   return (

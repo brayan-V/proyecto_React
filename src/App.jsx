@@ -9,7 +9,7 @@ import Case from './components/Case';
 import Monitores from './components/Monitores';
 import Mouse from './components/Mouse';
 import TarjetasVideo from './components/TarjetasVideo';
-import Carrito from './components/Carrito';
+import Carrito from './components/carrito';
 import Footer from './components/Footer';
 
 const App = () => {

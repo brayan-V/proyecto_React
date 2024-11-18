@@ -1,6 +1,6 @@
 import React from "react";
-
 const Footer = () => {
+
   return (
     <footer className="bg-dark text-white mt-5 p-4 text-center">
       <div className="container">
@@ -37,26 +37,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-md-4 mb-4">
-            <h5>¿Tienes alguna duda? Déjanos tus datos:</h5>
-            <form>
-              <div className="mb-3">
-                <label htmlFor="nombre" className="form-label">Nombre</label>
-                <input type="text" className="form-control" id="nombre" placeholder="Tu nombre" />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">Correo Electrónico</label>
-                <input type="email" className="form-control" id="email" placeholder="Tu correo electrónico" />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="mensaje" className="form-label">Mensaje</label>
-                <textarea className="form-control" id="mensaje" rows="3" placeholder="Tu mensaje"></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary">Enviar</button>
-            </form>
-          </div>
+          
         </div>
-        <hr />
         <p>&copy; 2024 Digital Dreams. Todos los derechos reservados.</p>
         <p>
           <a href="#" className="text-white">Política de Privacidad</a> | 

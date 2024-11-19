@@ -1,51 +1,57 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Footer = () => {
 
   return (
-    <footer className="bg-dark text-white mt-5 p-4 text-center">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4 mb-4">
-            <h5>Nuestras Redes Sociales</h5>
-            <a className="btn text-white" style={{ backgroundColor: '#3b5998' }} href="#!" role="button">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a className="btn text-white" style={{ backgroundColor: '#dd4b39' }} href="#!" role="button">
-              <i className="fab fa-google"></i>
-            </a>
-            <a className="btn text-white" style={{ backgroundColor: '#ac2bac' }} href="#!" role="button">
-              <i className="fab fa-instagram"></i>
-            </a>
-          </div>
-          <div className="col-md-4 mb-4">
-            <h5>Sitio Desarrollado por</h5>
+    <div>
+      <footer className="text-white bg-dark py-4">
+        <div className="container-fluid">
+          <div className="row justify-content-between aling-items-center" >
+            <div className="col-md-4">
+            <Link to={"/"} className=" col-md-4">
+            <img src="/public/images/logo1.png" className="mx-auto  rounded-circle" height="200" />
+            </Link>
+            </div>
+            <div className="col-md-4">
             <ul className="list-unstyled">
-              <li>
-                <a className="text-white" href="https://github.com/brayan-V" target="_blank" rel="noopener noreferrer">
+            <h5>Sitio Desarrollado por</h5>
+            <li>
+              <a className="text-white" href="https://github.com/brayan-V" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i> Brayan
                 </a>
               </li>
               <li>
-                <a className="text-white" href="https://github.com/DANIARISTIZABAL" target="_blank" rel="noopener noreferrer">
+              <a className="text-white" href="https://github.com/DANIARISTIZABAL" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i> Daniel
                 </a>
               </li>
               <li>
-                <a className="text-white" href="https://github.com/David-crypto-sys" target="_blank" rel="noopener noreferrer">
+              <a className="text-white" href="https://github.com/David-crypto-sys" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-github"></i> David
                 </a>
               </li>
             </ul>
-          </div>
-          
-        </div>
+
+        <div>
         <p>&copy; 2024 Digital Dreams. Todos los derechos reservados.</p>
         <p>
           <a href="#" className="text-white">Política de Privacidad</a> | 
           <a href="#" className="text-white">Términos de Servicio</a>
         </p>
-      </div>
-    </footer>
+        </div>
+            </div>
+            <div className="col-md-4">
+            <h5>Informacion de Contacto</h5>
+            
+          <button type="button" className="btn btn-link">
+            <Link to = "comentarios" >Comentarios</Link>
+          </button>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+    </div>
   );
 };
 

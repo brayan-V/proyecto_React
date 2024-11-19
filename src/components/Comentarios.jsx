@@ -80,7 +80,7 @@ const Comentarios = () =>{
       }
     };
     return (
-        <div className="col-md-4 mb-4">
+        <div className="col-md-4 mb-4 text-white">
             <h5>¿Tienes alguna duda? Déjanos tus datos:</h5>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">

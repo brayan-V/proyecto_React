@@ -20,12 +20,6 @@ const NavBar = () => {
           <button type="button" className="btn btn-link">
             Noticias
           </button>
-          <button type="button" className="btn btn-link">
-            Contacto
-          </button>
-          <button type="button" className="btn btn-link">
-            <Link to = "comentarios" className="nav-link text-decoration-none">Comentarios</Link>
-          </button>
           <div className="input-group input-group-sm ms-2">
             <input
               type="search"

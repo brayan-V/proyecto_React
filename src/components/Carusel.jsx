@@ -9,7 +9,7 @@ const Carusel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="/src/images/H5FLOW.png"
+              src="/public/images/H5FLOW.png"
               className="d-block w-100"
               alt="Corsair 4000D Airflow"
             />
@@ -19,7 +19,7 @@ const Carusel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="/src/images/casedrift.jpg"
+              src="/public/images/casedrift.jpg"
               className="d-block w-100"
               alt="Aerocool Dryft V2"
             />
@@ -29,7 +29,7 @@ const Carusel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="/src/images/Ryzen-5-5600-1.jpg"
+              src="/public/images/Ryzen-5-5600-1.jpg"
               className="d-block w-100"
               alt=""
             />
@@ -39,7 +39,7 @@ const Carusel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="/src/images/i51440.png"
+              src="/public/images/i51440.png"
               className="d-block w-100"
               alt=""
             />
@@ -48,14 +48,14 @@ const Carusel = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src="/src/images/4060.webp" className="d-block w-100" alt="" />
+            <img src="/public/images/4060.webp" className="d-block w-100" alt="" />
             <div className="carousel-caption d-none d-md-block">
               <h5>MSI GeForce RTX 4060 GAMING X GDDR6 8GB</h5>
             </div>
           </div>
           <div className="carousel-item">
             <img
-              src="/src/images/mouse3.png"
+              src="/public/images/mouse3.png"
               className="d-block w-100"
               alt=""
             />
@@ -65,7 +65,7 @@ const Carusel = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="/src/images/DIADEMA1.png"
+              src="/public/images/DIADEMA1.png"
               className="d-block w-100"
               alt=""
             />

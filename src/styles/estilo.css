@@ -62,13 +62,9 @@ text-decoration: none;
     text-align: center;
   }
 .carousel-item img {
-    margin: 0 auto;
-    padding-bottom: 80px;
-    display:  flex;
-    justify-content: center;
-    width: 600px;
-    height: 600px;
-    max-width: 500px;
+    object-fit: scale-down;
+  height: 50vh;
+  width: 100%;
 }
 .carousel-item h5{
     font-family: "Honk", system-ui;

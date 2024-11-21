@@ -11,8 +11,7 @@ import TarjetasVideo from "./components/TarjetasVideo";
 import  Comentarios  from "./components/Comentarios";
 import Home from "./components/Home";
 import Carusel from "./components/Carusel";
-import Register from "./components/Register";
-import Login from "./components/Login";
+
 
 const App = () => {
   const [carritoItems, setCarritoItems] = useState([]);
@@ -47,8 +46,6 @@ const App = () => {
             <Route path="/Categorias/Monitores" element={<Monitores  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/Mouses" element={<Mouse  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="comentarios" element={<Comentarios/>} />
-            <Route path="login" element={<Login/>} />
-            <Route path="registro" element={<Register/>} />
           </Route>
         </Routes>
       <Carrito carritoItems={carritoItems} setCarritoItems={setCarritoItems} />

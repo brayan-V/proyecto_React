@@ -24,37 +24,37 @@ const Cpu = ({agregarAlCarritoClicked}) =>{
         {
             titulo: "Intel Core i9-9900K",
             precio: "$1.800.000",
-            imagenSrc: "/public/images/corei.png",
+            imagenSrc: "/images/corei.png",
             especificacion: "8 núcleos / 16 hilos 3.60 GHz hasta 5.00 GHz / 16 MB de cachéCompatible solo con placas base basadas en chipsets Intel serie 300Intel Compatible con memoria Optane Intel Gráficos UHD 630."
         },
         {
             titulo: "Intel 7th Gen",
             precios: "$680.000",
-            imagenSrc: "/public/images/Intel 7th Gen.png",
+            imagenSrc: "/images/Intel 7th Gen.png",
             especificacion: "La arquitectura híbrida de rendimiento integra dos microarquitecturas principales, priorizando y distribuyendo cargas de trabajo para optimizar el rendimiento."
         },
         {
             titulo: "AMD Ryzen 7 7800X3D",
             precio: "$1.000.000",
-            imagenSrc: "/public/images/AMD.png",
+            imagenSrc: "/images/AMD.png",
             especificacion: "El procesador proporciona una ejecución confiable y rápida de tareas con la máxima eficiencia. Frecuencia de gráficos: 2200 MHZ. Número de núcleos de CPU: 8. Temperatura máxima de funcionamiento (Tjmax): 192.2 °F."
         },
         {
             titulo: "AMD RYZEN 5 7600X + THERMALTAKE TH120 ARGB",
             precio: "3.800.000",
-            imagenSrc: "/public/images/RYZEN 5 7600X.png",
+            imagenSrc: "/images/RYZEN 5 7600X.png",
             especificacion: "Ventilador de radiador AR G B de 4.724 in. El diseño de ventilador de presión estática ofrece un impresionante rendimiento de refrigeración N.° de núcleos de CPU  6N.° de subprocesos  12."
         },
         {
             titulo: "CoreTM i9-14900K",
             precio: "1.300.000",
-            imagenSrc: "/public/images/CoreTM i9.png",
+            imagenSrc: "/images/CoreTM i9.png",
             especificacion: "La velocidad máxima de reloj líder de hasta 6.0 GHz te da un juego más suave, velocidades de fotogramas más altas y una respuesta rápida Compatible con Intel serie 600 con posible actualización de BIOS o placas base basadas en chipset serie 700."
         },
         {
             titulo: "AMD Ryzen 7 3700X",
             precio: "$900.000",
-            imagenSrc: "/public/images/AMD 7 3700X.png",
+            imagenSrc: "/images/AMD 7 3700X.png",
             especificacion: "Puede ofrecer un rendimiento ultrarrápido de 100 FPS en los juegos más populares del mundo 8 núcleos y 16 hilos de procesamiento incluidos con el enfriador AMD Wraith Prism con soporte LED controlado por color."
         }
     ];

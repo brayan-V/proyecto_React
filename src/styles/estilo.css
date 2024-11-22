@@ -62,7 +62,7 @@ text-decoration: none;
     text-align: center;
   }
 .carousel-item img {
-    object-fit: scale-down;
+object-fit: scale-down;
   height: 500px;
   width: 500px;
 }
@@ -73,12 +73,13 @@ text-decoration: none;
 .carousel-control-next-icon {
     padding: 30%;
     margin-left: 150%;
+    
 
 }
 .carousel-control-prev-icon {
     padding: 30%;
     margin-right: 150%;
-
+    
 }
 /*blog*/
 
@@ -161,7 +162,7 @@ section .lead{
     font-weight: bold;
 }
 section .mt-5.mb-4{
-    color: #000;
+    color: #ffffff;
     font-size: 40px;
     font-weight: bold;
 }
@@ -469,7 +470,7 @@ section .mt-5.mb-4{
   }
   
   .juegos-del-momento h2 {
-    font-size: 2em;
+    font-size: 40px;
     margin-bottom: 20px;
   }
   
@@ -552,6 +553,14 @@ section .mt-5.mb-4{
     transition-duration: 1.5s;
   }
 /*blog
+/*boton comentarios */
+.btn-link {
+    background-color: #0f61f8; /* Azul Bootstrap */
+    border-color: #ffffff;
+    color: rgb(255, 255, 255);
+    border-radius: 0%;
+}
+
 
 /* SECCION RESPONSIVE */
 @media  (max-width: 850px) {

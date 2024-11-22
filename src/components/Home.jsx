@@ -2,7 +2,7 @@ import React from 'react';
 import Headers from './Headers';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -10,10 +10,10 @@ const Home = () => {
       <Headers />
       <NavBar />
       <div className = "mt-3 d-flex justify-content-end">
-       <Link to = "login" className = "btn btn-outline-primary mx-2">
+       <Link to = "login" className = "btn btn-primary mx-2 px-3 py-2">
         <i className = "fas fa-sign-in-alt"></i>Login
        </Link>
-       <Link to = "registro" className = "btn btn-outline-success mx-2">
+       <Link to = "registro" className = "btn btn-success mx-2">
         <i className = "fas fa-user-plus"></i>signup
        </Link>
       </div>

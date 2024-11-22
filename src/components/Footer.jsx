@@ -43,9 +43,11 @@ const Footer = () => {
             <div className="col-md-4">
             <h5>Zona de dudas y comentarios</h5>
             
-          <button type="button" className="btn btn-link">
-            <Link to = "comentarios" >Comentarios</Link>
+          <button type="button" className="btn mx-5 px-3 py-2">
+       <Link to = "comentarios" className = "btn btn-primary mx-2 text-dark rounded-pill fw-bold">
+        <i className = "fas fa-in-alt"></i>Comentario</Link>
           </button>
+          
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ const NavBar = () => {
     <>
       <div className="navegacion">
         <div className="btn-group shadow-0" role="group">
-          <button type="button" className="btn btn-link">
+          <button type="button" className="btn btn-primary mx-2 text-white rounded fw-bold">
             <Link to="/" className="nav-link text-decoration-none">Home</Link>
           </button>
           <DropdownButton id="dropdown-basic-button" title="Categorias">
@@ -18,7 +18,7 @@ const NavBar = () => {
             <Dropdown.Item as={Link} to="/Categorias/Mouses">Mouses</Dropdown.Item>
             <Dropdown.Item as={Link} to="/Categorias/Teclados">Teclados</Dropdown.Item>
           </DropdownButton>
-          <button type="button" className="btn btn-link">
+          <button type="button" className="btn btn-linkbtn btn-primary mx-2 text-white rounded fw-bold">
             Noticias
           </button>
           <div className="input-group input-group-sm ms-2">

@@ -59,7 +59,7 @@ const Carusel = () => {
         </div>
         <div className="carousel-item">
           <img
-           src="/images/4060.webp"
+          src="/images/4060.webp"
             className="d-block w-100"
             alt="MSI GeForce RTX 4060 GAMING X GDDR6 8GB"
           />
@@ -115,6 +115,7 @@ const Carusel = () => {
           <span className="visually-hidden">Siguiente</span>
         </button>
       </div>
+    </div>
   );
 };
 

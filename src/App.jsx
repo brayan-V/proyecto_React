@@ -8,6 +8,7 @@ import Diademas from "./components/Diademas";
 import Monitores from "./components/Monitores";
 import Mouse from "./components/Mouse";
 import TarjetasVideo from "./components/TarjetasVideo";
+import Teclados from "./components/Teclados";
 import  Comentarios  from "./components/Comentarios";
 import Home from "./components/Home";
 import Carusel from "./components/Carusel";

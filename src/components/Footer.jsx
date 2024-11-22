@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
             </div>
             <div className="col-md-4">
-            <h5>Informacion de Contacto</h5>
+            <h5>Zona de dudas y comentarios</h5>
             
           <button type="button" className="btn btn-link">
             <Link to = "comentarios" >Comentarios</Link>

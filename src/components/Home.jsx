@@ -9,6 +9,14 @@ const Home = () => {
     <>
       <Headers />
       <NavBar />
+      <div className = "mt-3 d-flex justify-content-end">
+       <Link to = "login" className = "btn btn-outline-primary mx-2">
+        <i className = "fas fa-sign-in-alt"></i>Login
+       </Link>
+       <Link to = "registro" className = "btn btn-outline-success mx-2">
+        <i className = "fas fa-user-plus"></i>signup
+       </Link>
+      </div>
       <div className="contenedor">
         <Outlet /> {/* Aquí va el contenido de la aplicación */}
       </div>

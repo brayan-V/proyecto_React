@@ -8,9 +8,13 @@ import Diademas from "./components/Diademas";
 import Monitores from "./components/Monitores";
 import Mouse from "./components/Mouse";
 import TarjetasVideo from "./components/TarjetasVideo";
+import Teclados from "./components/Teclados";
 import  Comentarios  from "./components/Comentarios";
 import Home from "./components/Home";
 import Carusel from "./components/Carusel";
+import Login from "./components/Login";
+import Registro from "./components/Registro";
+
 
 
 const App = () => {
@@ -45,7 +49,10 @@ const App = () => {
             <Route path="/Categorias/Diademas" element={<Diademas  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/Monitores" element={<Monitores  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/Mouses" element={<Mouse  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
-            <Route path="comentarios" element={<Comentarios/>} />
+            <Route path="/Categorias/Teclados" element={<Teclados  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
+            <Route path="/comentarios" element={<Comentarios/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/registro" element={<Registro/>} />
           </Route>
         </Routes>
       <Carrito carritoItems={carritoItems} setCarritoItems={setCarritoItems} />

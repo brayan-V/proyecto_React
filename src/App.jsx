@@ -46,6 +46,7 @@ const App = () => {
             <Route path="/Categorias/Diademas" element={<Diademas  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/Monitores" element={<Monitores  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/Mouses" element={<Mouse  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
+            <Route path="/Categorias/Teclados" element={<Teclados  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="comentarios" element={<Comentarios/>} />
           </Route>
         </Routes>

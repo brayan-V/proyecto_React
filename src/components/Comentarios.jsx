@@ -66,8 +66,8 @@ const Comentarios = () =>{
         text: "Una vez eliminado, no se podra recuperar el item",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
         confirmButtonText: "Si, eliminarlo!"
       });
       // Si el usuario le da click en confirmar, el usuario se eliminara
@@ -80,7 +80,7 @@ const Comentarios = () =>{
       }
     };
     return (
-        <div className="col-md-4 mb-4 text-white">
+        <div className="col-md-4 mb-4 text-white py-4">
             <h5>¿Tienes alguna duda? Déjanos tus datos:</h5>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
@@ -90,6 +90,7 @@ const Comentarios = () =>{
                  placeholder="Tu nombre"
                  value={form.nombre}
                  onChange={handleChange}
+                 required
                   />
               </div>
               <div className="mb-3">
@@ -100,6 +101,7 @@ const Comentarios = () =>{
                  placeholder="Tu correo electrónico"
                  value={form.email}
                  onChange ={handleChange}
+                 required
                  />
               </div>
               <div className="mb-3">
@@ -112,21 +114,21 @@ const Comentarios = () =>{
                 onChange={handleChange}
                 />
               </div>
-              <button type="submit" className="btn btn-primary">{editingId ? "Actualizar": "Enviar"}</button>
+              <button type="submit" className="btn btn-success">{editingId ? "Actualizar": "Enviar"}</button>
             </form>
             
             <div className="item-list">
       
       {items.map((item) => (
-        <div key={item._id} className="item">
+        <div key={item._id} className="item py-2" >
           <span>
             <strong>{item.nombre}</strong>: {item.mensaje}
           </span>
           <div className="item-buttons">
-            <button className="edit-btn" onClick={() => handleEdit(item)}>
+            <button className="edit-btn btn btn-primary mx-2" onClick={() => handleEdit(item)}>
               Editar
             </button>
-            <button className="delete-btn" onClick={() => handleDelete(item._id)}>
+            <button className="delete-btn btn btn-danger" onClick={() => handleDelete(item._id)}>
               Eliminar
             </button>
           </div>

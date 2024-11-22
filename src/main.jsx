@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import App from "./App";
 import "./styles/estilo.css"
+import "./components/Home.jsx"
 
 // Prepararemos la aplicacion en React
 ReactDOM.createRoot(document.getElementById("root")).render(

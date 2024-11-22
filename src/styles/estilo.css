@@ -32,7 +32,7 @@ footer ul a{
 text-decoration: none;
 }
 .navegacion{
-    background-color: rgb(64, 16, 109, 0.8);
+    background-color: rgba(255, 31, 31, 0.589);
     border-style:dashed;
     padding: 10px;
 }
@@ -63,12 +63,189 @@ text-decoration: none;
   }
 .carousel-item img {
     object-fit: scale-down;
-  height: 50vh;
-  width: 100%;
+  height: 500px;
+  width: 500px;
 }
 .carousel-item h5{
     font-family: "Honk", system-ui;
     font-size: 30px;
+}
+.carousel-control-next-icon {
+    padding: 30%;
+    margin-left: 150%;
+
+}
+.carousel-control-prev-icon {
+    padding: 30%;
+    margin-right: 150%;
+
+}
+/*blog*/
+
+/* Estilos generales de la sección de blog */
+.blog-section {
+    background: linear-gradient(135deg, #dc51ff 0%, #250441 70%);
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.blog-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilos para títulos */
+.blog-section h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.blog-section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #f83a3a;
+    margin: 10px auto 0;
+}
+
+/* Estilos para la sección de ventajas */
+.blog-section .media {
+    background-color: rgba(155, 92, 236, 0.671);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.blog-section .media:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-section .media img {
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    border-radius: 20%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-section .media:hover img {
+    transform: rotate(360deg);
+}
+
+.blog-section .media-body h5 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 30px;
+
+}
+
+.blog-section .media-body {
+    color: #000000;
+    font-size: 23px;
+}
+section .lead{
+    color: #000000;
+    font-size: 30px;
+    font-weight: bold;
+}
+section .mt-5.mb-4{
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Estilos para tarjetas de recomendaciones */
+.blog-section .card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background: linear-gradient(to right, #6587f6 0%, #a02de2 100%);
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+}
+
+.blog-section .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.blog-section .card-body {
+    padding: 25px;
+}
+
+.blog-section .card-title {
+    color: white;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.blog-section .card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-section .card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.blog-section .card ul li:last-child {
+    border-bottom: none;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .blog-section .media {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-section .media img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
 }
 
 .contenedor {
@@ -284,9 +461,97 @@ text-decoration: none;
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
+.juegos-del-momento {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+  }
+  
+  .juegos-del-momento h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .juegos-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .juego {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .juego img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+  }
+  
+  .juego h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .juego p {
+    font-size: 1em;
+  }
+  
+  .juego:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
 
-
-
+.button {
+    width: 110px;
+    height: 40px;
+    display: flexbox;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background-color: rgb(161, 255, 20);
+    border-radius: 30px;
+    color: rgb(19, 19, 19);
+    font-weight: 600;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+    padding-left: 4px;
+    transition-duration: .5s;
+  }
+  
+  .svgIcon {
+    height: 25px;
+    transition-duration: 1.5s;
+  }
+  
+  .bell path {
+    fill: rgb(19, 19, 19);
+  }
+  
+  .button:hover {
+    background-color: rgb(192, 255, 20);
+    transition-duration: .5s;
+  }
+  
+  .button:active {
+    transform: scale(0.97);
+    transition-duration: .2s;
+  }
+  
+  .button:hover .svgIcon {
+    transform: rotate(250deg);
+    transition-duration: 1.5s;
+  }
+/*blog
 
 /* SECCION RESPONSIVE */
 @media  (max-width: 850px) {

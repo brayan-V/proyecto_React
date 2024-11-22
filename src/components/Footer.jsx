@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="row justify-content-between aling-items-center" >
             <div className="col-md-4">
             <Link to={"/"} className=" col-md-4">
-            <img src="/public/images/logo1.png" className="mx-auto  rounded-circle" height="200" />
+            <img src="/images/logo1.png" className="mx-auto  rounded-circle" height="200" />
             </Link>
             </div>
             <div className="col-md-4">

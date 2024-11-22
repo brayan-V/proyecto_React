@@ -12,6 +12,7 @@ import  Comentarios  from "./components/Comentarios";
 import Home from "./components/Home";
 import Carusel from "./components/Carusel";
 
+
 const App = () => {
   const [carritoItems, setCarritoItems] = useState([]);
 
@@ -37,7 +38,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} >
-            <Route path="/" element={<Carusel />} />
+            <Route index element={<Carusel />} />
             <Route path="/Categorias/Cpu" element={<Cpu  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/Case" element={<Case  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />
             <Route path="/Categorias/TarjetasVideo" element={<TarjetasVideo  agregarAlCarritoClicked={agregarAlCarritoClicked}/>} />

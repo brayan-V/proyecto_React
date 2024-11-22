@@ -75,7 +75,7 @@ const navegacion = useNavigate();
         <button type="submit" className="btn btn-primary">Registrar</button>
       </form>
       <div className = "mt-3">
-        <p>Ya tienes una cuenta? <Link to="/login" className="text-warning">Inicia sesión</Link></p>
+        <p>¿Ya tienes una cuenta? <Link to="/login" className="text-warning">Inicia sesión</Link></p>
       </div>
     </div>
   );

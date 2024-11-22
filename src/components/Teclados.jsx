@@ -47,7 +47,7 @@ const Teclados = ({agregarAlCarritoClicked}) => {
         {
             titulo: "Logitech G Pro",
             precio: "$320.000",
-            imagenSrc: "/public/images/Logitech.png",
+            imagenSrc: "/public/images/Logitech1.png",
             especificacion: "Ejecute un conjunto de acciones o comandos complejos o cronometrados con solo presionar un botón. La programación y el uso de F-key (F1-F12) requiere el software Logitech G HUB. Las macros de teclado generalmente no están permitidas en los torneos. Las teclas de programación y la iluminación requieren el software Logitech G HUB."
         },
         {

@@ -16,6 +16,7 @@ const NavBar = () => {
             <Dropdown.Item as={Link} to="/Categorias/Diademas">Diademas</Dropdown.Item>
             <Dropdown.Item as={Link} to="/Categorias/Monitores">Monitores</Dropdown.Item>
             <Dropdown.Item as={Link} to="/Categorias/Mouses">Mouses</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/Categorias/Teclados">Teclados</Dropdown.Item>
           </DropdownButton>
           <button type="button" className="btn btn-link">
             Noticias

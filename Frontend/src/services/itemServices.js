@@ -1,5 +1,5 @@
 // Crear la URL base de la API
-const API_URL ="https://proyecto-react-gilt-psi.vercel.app/items";
+const API_URL = import.meta.env.VITE_API_URL + "/items";
 
 // Fucion para obtener todos los elementos
 export const getItems = async () => {

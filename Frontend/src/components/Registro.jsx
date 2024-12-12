@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
-import { registerUser } from './itemServices';
+import { registerUser } from '../services/itemServices';
 
 const Registro = () => {
   const [form, setForm] = useState({ nombreUsuario: "", email: "", clave: "" });

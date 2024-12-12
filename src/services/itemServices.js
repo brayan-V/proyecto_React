@@ -1,5 +1,5 @@
 // Crear la URL base de la API
-const API_URL ="http://proyecto-react-steel.vercel.app:5000/items";
+const API_URL ="http://proyecto-react-steel.vercel.app/items";
 
 // Fucion para obtener todos los elementos
 export const getItems = async () => {

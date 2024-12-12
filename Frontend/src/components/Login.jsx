@@ -1,36 +1,36 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
-import axios from 'axios';
-import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+import { loginUser } from "./itemServices";
 
 const Login = () => {
-  const [form, setForm] = useState({nombreUsuario: "", clave:""})
+  const [form, setForm] = useState({ nombreUsuario: "", clave: "" });
   const navegacion = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', form);
-      localStorage.setItem('token', response.data.token);
+      const data = await loginUser(form); // Captura los datos devueltos por el servidor
       Swal.fire({
-        icon: 'success',
-        title: 'Inicio de Sesion Exitoso',
-        text: `Bienvenido de nuevo  ${form.nombreUsuario}`
-    }).then( () => {
-      navegacion('/');
-    })
+        icon: "success",
+        title: "Inicio de Sesión Exitoso",
+        text: `Bienvenido de nuevo, ${data.nombreUsuario || form.nombreUsuario}`,
+      }).then(() => {
+        navegacion("/");
+      });
     } catch (error) {
       Swal.fire({
-        icon: 'error',
-        title: 'Error de datos',
-        text: 'Error al iniciar sesión: ' + error.response.data.error
-    })
+        icon: "error",
+        title: "Error de datos",
+        text: "Error al iniciar sesión: " + error.message,
+      });
     }
-    setForm({nombreUsuario: "", clave:""});
+    setForm({ nombreUsuario: "", clave: "" });
   };
 
-  const handleChange =  (event) =>{
-    setForm({...form, [event.target.name]: event.target.value});
+  const handleChange = (event) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
   };
 
   return (
@@ -38,33 +38,46 @@ const Login = () => {
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="nombre" className="form-label">Nombre de usuario</label>
-          <input name = "nombreUsuario"
+          <label htmlFor="nombre" className="form-label">
+            Nombre de usuario
+          </label>
+          <input
+            name="nombreUsuario"
             type="text"
             className="form-control"
             placeholder="Tu nombre de usuario"
             id="nombre"
-            value={setForm.nombreUsuario}
+            value={form.nombreUsuario}
             onChange={handleChange}
             required
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="clave" className="form-label">Contraseña</label>
-          <input name = "clave"
+          <label htmlFor="clave" className="form-label">
+            Contraseña
+          </label>
+          <input
+            name="clave"
             type="password"
             className="form-control"
             placeholder="Tu contraseña"
             id="clave"
-            value={setForm.clave}
+            value={form.clave}
             onChange={handleChange}
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
+        <button type="submit" className="btn btn-primary">
+          Iniciar Sesión
+        </button>
       </form>
-      <div className = "mt-3">
-        <p>¿Aún no tienes una cuenta? <Link to="/registro" className="text-warning">Regístrate</Link></p>
+      <div className="mt-3">
+        <p>
+          ¿Aún no tienes una cuenta?{" "}
+          <Link to="/registro" className="text-warning">
+            Regístrate
+          </Link>
+        </p>
       </div>
     </div>
   );

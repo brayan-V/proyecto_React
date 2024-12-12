@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Swal from "sweetalert2";
-import Carrito from "./components/carrito";
+import Carrito from "./components/Carrito";
 import Case from "./components/Case";
 import Cpu from "./components/Cpu";
 import Diademas from "./components/Diademas";

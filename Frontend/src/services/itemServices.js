@@ -1,5 +1,5 @@
-// Crear las URL de la API
-const API_URL = import.meta.env.VITE_API_URL + "/items"; // URL para comentarios
+// Crear las URL de la API//
+ const API_URL = import.meta.env.VITE_API_URL + "/items"; // URL para comentarios
 const API_LOGIN_URL = import.meta.env.VITE_API_URL + "/login"; // URL para el login
 const API_REGISTER_URL = import.meta.env.VITE_API_URL + "/registro"; // URL para el registro
 

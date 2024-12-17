@@ -1,46 +1,53 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router";
-import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
-import { loginUser } from "../services/itemServices";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { loginUser } from '../services/itemServices';
 
-const Login = () => {
-  const [form, setForm] = useState({ nombreUsuario: "", clave: "" });
-  const navegacion = useNavigate();
+const Login = ({ setUser }) => {
+  const [form, setForm] = useState({ nombreUsuario: '', clave: '' });
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = await loginUser(form); // Captura los datos devueltos por el servidor
+      const { token, usuario } = await loginUser(form);
+      localStorage.setItem('token', token);
+      setUser(usuario);
+
       Swal.fire({
-        icon: "success",
-        title: "Inicio de Sesión Exitoso",
-        text: `Bienvenido de nuevo, ${data.nombreUsuario || form.nombreUsuario}`,
-      }).then(() => {
-        navegacion("/");
+        icon: 'success',
+        title: 'Inicio de Sesión Exitoso',
+        text: `Bienvenido de nuevo, ${usuario.nombreUsuario}`,
       });
-    } catch (error) {
+
+      // Redirigir según el rol
+      if (usuario.esAdmin) {
+        navigate('/dashboard');
+      } else {
+        navigate('/');
+      }
+    } catch (err) {
+      setError(err.message || 'Error al iniciar sesión.');
       Swal.fire({
-        icon: "error",
-        title: "Error de datos",
-        text: "Error al iniciar sesión: " + error.message,
+        icon: 'error',
+        title: 'Error',
+        text: error,
       });
     }
-    setForm({ nombreUsuario: "", clave: "" });
   };
 
-  const handleChange = (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   return (
     <div className="container col-md-4 mb-4 text-white py-5">
       <h2>Iniciar Sesión</h2>
+      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="nombre" className="form-label">
-            Nombre de usuario
-          </label>
+          <label htmlFor="nombre" className="form-label">Nombre de usuario</label>
           <input
             name="nombreUsuario"
             type="text"
@@ -53,9 +60,7 @@ const Login = () => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="clave" className="form-label">
-            Contraseña
-          </label>
+          <label htmlFor="clave" className="form-label">Contraseña</label>
           <input
             name="clave"
             type="password"
@@ -67,18 +72,8 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Iniciar Sesión
-        </button>
+        <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
       </form>
-      <div className="mt-3">
-        <p>
-          ¿Aún no tienes una cuenta?{" "}
-          <Link to="/registro" className="text-warning">
-            Regístrate
-          </Link>
-        </p>
-      </div>
     </div>
   );
 };

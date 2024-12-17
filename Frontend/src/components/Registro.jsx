@@ -5,46 +5,67 @@ import { Link } from 'react-router-dom';
 import { registerUser } from '../services/itemServices';
 
 const Registro = () => {
-  const [form, setForm] = useState({ nombreUsuario: "", email: "", clave: "" });
-  const navegacion = useNavigate();
+  const [form, setForm] = useState({
+    nombreUsuario: '',
+    email: '',
+    clave: '',
+    esAdmin: false, // Campo para indicar si es administrador
+  });
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Validaciones locales
+    if (!form.nombreUsuario || !form.email || !form.clave) {
+      setError('Todos los campos son obligatorios.');
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(form.email)) {
+      setError('El correo electrónico no es válido.');
+      return;
+    }
+
     try {
       await registerUser(form);
       Swal.fire({
         icon: 'success',
         title: 'Registro Exitoso',
-        text: 'Tu registro se ha realizado con éxito',
+        text: 'Tu registro se ha realizado con éxito.',
       }).then(() => {
-        navegacion("/login");
+        navigate('/login'); // Redirigir al login tras registro exitoso
       });
-    } catch (error) {
+    } catch (err) {
+      setError(err.message || 'Error al registrar el usuario.');
       Swal.fire({
         icon: 'error',
         title: 'Error de datos',
-        text: error.message,
+        text: error,
       });
     }
-    setForm({ nombreUsuario: "", email: "", clave: "" });
   };
 
   const handleChange = (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value });
+    const { name, value, type, checked } = event.target;
+    setForm({
+      ...form,
+      [name]: type === 'checkbox' ? checked : value,
+    });
   };
 
   return (
-    <div className="container container col-md-4 mb-4 text-white py-5">
+    <div className="container col-md-4 mb-4 text-white py-5">
       <h2>Registro</h2>
+      {error && <p className="error text-danger">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="nombre" className="form-label">Nombre de usuario</label>
+          <label htmlFor="nombreUsuario" className="form-label">Nombre de usuario</label>
           <input
             name="nombreUsuario"
             type="text"
             className="form-control"
-            placeholder="Nombre de usuario"
-            id="nombre"
+            placeholder="Tu nombre de usuario"
+            id="nombreUsuario"
             value={form.nombreUsuario}
             onChange={handleChange}
             required
@@ -56,7 +77,7 @@ const Registro = () => {
             name="email"
             type="email"
             className="form-control"
-            placeholder="correo electrónico"
+            placeholder="Tu correo electrónico"
             id="email"
             value={form.email}
             onChange={handleChange}
@@ -69,17 +90,33 @@ const Registro = () => {
             name="clave"
             type="password"
             className="form-control"
-            placeholder="Contraseña"
+            placeholder="Tu contraseña"
             id="clave"
             value={form.clave}
             onChange={handleChange}
             required
           />
         </div>
+        <div className="mb-3 form-check">
+          <input
+            name="esAdmin"
+            type="checkbox"
+            className="form-check-input"
+            id="esAdmin"
+            checked={form.esAdmin}
+            onChange={handleChange}
+          />
+          <label className="form-check-label" htmlFor="esAdmin">
+            ¿Eres administrador?
+          </label>
+        </div>
         <button type="submit" className="btn btn-primary">Registrar</button>
       </form>
       <div className="mt-3">
-        <p>¿Ya tienes una cuenta? <Link to="/login" className="text-warning">Inicia sesión</Link></p>
+        <p>
+          ¿Ya tienes una cuenta?{' '}
+          <Link to="/login" className="text-warning">Inicia sesión</Link>
+        </p>
       </div>
     </div>
   );

@@ -1,24 +1,55 @@
-import React from 'react';
-import Headers from './Headers';
-import NavBar from './NavBar';
-import Footer from './Footer';
-import { Link, Outlet } from 'react-router-dom';
+import React from "react";
+import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
+import UserGreeting from "./UserGreeting";
 
-const Home = () => {
+const Home = ({ user, handleLogout }) => {
+  const isAdmin = user?.esAdmin;
+
   return (
     <>
-      <Headers />
-      <NavBar />
-      <div className = "mt-3 d-flex justify-content-end">
-       <Link to = "login" className = "btn btn-primary mx-2 px-3 py-2">
-        <i className = "fas fa-sign-in-alt"></i>Login
-       </Link>
-       <Link to = "registro" className = "btn btn-success mx-2">
-        <i className = "fas fa-user-plus"></i>signup
-       </Link>
+      <Header />
+      <Navbar/>
+      <div className="mt-3 d-flex justify-content-end">
+        {user ? (
+          <div className="d-flex align-items-center">
+            <UserGreeting user={user} />
+            <button
+              className="btn btn-danger mx-2"
+              onClick={handleLogout}
+            >
+              <i className="fas fa-sign-out-alt"></i> Logout
+            </button>
+            {isAdmin && (
+              <button
+                className="btn btn-primary mx-2"
+                onClick={() => (window.location.href = "/dashboard")}
+              >
+                <i className="fas fa-tools"></i> Dashboard
+              </button>
+            )}
+          </div>
+        ) : (
+          <>
+            <button
+              className="btn btn-primary mx-2"
+              onClick={() => (window.location.href = "/login")}
+            >
+              <i className="fas fa-sign-in-alt"></i> Login
+            </button>
+            <button
+              className="btn btn-success mx-2"
+              onClick={() => (window.location.href = "/registro")}
+            >
+              <i className="fas fa-user-plus"></i> Signup
+            </button>
+          </>
+        )}
       </div>
       <div className="contenedor">
-        <Outlet /> {/* Aquí va el contenido de la aplicación */}
+        <Outlet /> {/* Contenido dinámico basado en las rutas */}
       </div>
       <section className="juegos-del-momento">
         <h2>Videojuegos del Momento en PC</h2>

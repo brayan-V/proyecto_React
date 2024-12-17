@@ -560,7 +560,36 @@ section .mt-5.mb-4{
     color: rgb(255, 255, 255);
     border-radius: 0%;
 }
-
+/* estilos de los graficos */
+.saleChart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Establece el ancho máximo del contenedor */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+  }
+.saleTittle{
+    color: black;
+}
+.dashboardTittle{
+    font-family: "Honk", system-ui;
+    font-size: 35px;
+}
+/* Saludo */
+.user-greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color4); /* Fondo suave */
+    color: white; /* Texto claro */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: all 0.3s ease-in-out;
+  }
 
 /* SECCION RESPONSIVE */
 @media  (max-width: 850px) {
